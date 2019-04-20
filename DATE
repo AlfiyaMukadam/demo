@@ -1,0 +1,28 @@
+$cInDate = "SELECT check_in,check_out FROM room "
+$cOutDate = '2016-11-08';
+$rNumber = 'G01';
+
+$sql18 = "SELECT rid, checkin, checkout FROM bookings
+    WHERE rid = '$rNumber'";    //$rNumber is room number obtained from a dropdown list
+$results18 = mysqli_query($con, $sql18);
+
+while ($row = mysqli_fetch_array($results18)) {
+    if (($cInDate >= $row["checkin"] && $cInDate <= $row["checkout"]) ||  //$cInDate and $cOutDate are user inputs
+        ($cOutDate > $row["checkin"] && $cOutDate <= $row["checkout"])) {
+        echo "invalid booking";
+    }
+
+
+
+    echo $id;
+
+
+	$sql18 = "SELECT room_no, check_in, check_out FROM check2345 WHERE room_no = '$selected_val7'";    //$rNumber is room number obtained from a dropdown list
+	$results18 = mysqli_query($connect, $sql18);
+
+	while ($row = mysqli_fetch_array($results18)) {
+    if (($selected_val3 >= $row["check_in"] && $selected_val3 <= $row["check_out"]) ||  //$cInDate and $cOutDate are user inputs
+        ($selected_val4 > $row["checkin"] && $selected_val4 <= $row["checkout"])) 
+    {
+        echo "invalid booking";
+    }

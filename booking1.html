@@ -1,0 +1,280 @@
+<HTML>
+<HEAD background="llll.jpg" >
+<TITLE>BOOKING
+</TITLE>
+
+<STYLE>
+ul
+{
+margin-left:0px;
+margin-top:10px;
+list-style: none;
+}
+ul li
+{
+float: left;
+width: 168px;
+height: 40px;
+opacity:;
+line-height: 40px;
+text-align: center;
+font-size: 20px;
+margin-right:2px;
+
+}
+ul li a
+{
+text-decoration:none;
+
+display:block;
+}
+
+ul li a:hover
+{
+background-color:#0EA101  ;
+border-radius: 20px;
+}
+ul li ul li
+{
+display:none;
+font-size: 15px;
+}
+ul li:hover ul li
+{
+display:block;
+}
+h1
+{
+color: black;
+font-weight:bold;
+font-size:50px;
+text-align:center;
+
+
+}
+#A
+{
+margin-left:500px;
+margin-top:10px;
+list-style: none;
+}
+A li
+{
+float: left;
+width: 168px;
+height: 40px;
+
+opacity:;
+line-height: 40px;
+text-align: center;
+font-size: 20px;
+margin-right:2px;
+
+}
+A li a
+{
+text-decoration:none;
+
+display:block;
+}
+
+A li a:hover
+{
+
+}
+A li A li
+{
+display:none;
+font-size: 15px;
+}
+A li:hover A li
+{
+display:block;
+}
+</STYLE>
+
+<script language="javascript"type="text/javascript">
+<!--
+
+function validate()
+{
+var fname=document.myForm.first_name.value;
+var lname=document.myForm.last_name.value;
+var addr=document.myForm.address.value;
+var adh=document.myForm.Adhaar_no.value;
+var con=document.myForm.Contact_Number.value;
+
+
+if(isNaN(con))
+{
+alert("enetr valid contact");
+document.myForm.Contact_Number.focus();
+return false;
+}
+
+if(isNaN(adh))
+{
+alert("enetr valid Adhaar_no");
+document.myForm.Adhaar_no.focus();
+return false;
+}
+
+
+if(!(isNaN(fname)))
+{
+alert("enetr valid name");
+document.myForm.first_name.focus();
+return false;
+}
+
+if(!(isNaN(lname)))
+{
+alert("enetr valid name");
+document.myForm.last_name.focus();
+return false;
+}
+
+//-->
+</script>
+
+
+</HEAD>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<body background="llll.jpg" >
+<ul>
+<li><a><a href="bts.html">HOME</a></a></li>
+</ul>
+
+<div class="red">
+  <h1>HOTEL BOOKING </h1>
+</div>
+
+
+<p>
+<pre>
+
+<FORM name="myForm" action="fibook.php" method="post">
+<b>
+ <div class="jumbotron">
+<div class="container">
+<center><h4> DETAILS</h4></center>
+
+<label>FIRST NAME:</label><INPUT TYPE="TEXT" NAME="first_name" VALUE="" SIZE="30"  onfocus="abc(this)" ID="FN" onblur="fn()" required>
+<BR>
+<label>LAST NAME:</label><INPUT TYPE="TEXT" NAME="last_name" VALUE="" SIZE="30" onfocus="abc(this)" ID="LN" onblur="fn2()" required>
+<BR>
+<label>ADDRESS:</label><INPUT TYPE="TEXT" NAME="address" VALUE="" SIZE="30" onfocus="abc(this)">
+<BR>
+<label>ADHAAR:</label><INPUT TYPE="TEXT" NAME="Adhaar_no" VALUE="" SIZE="30" onfocus="abc(this)" maxlength="16" minlength="16" required placeholder="please enter your Adhaar_no">
+<BR>
+<label>PHONE:</label><INPUT TYPE="TEXT" NAME="Contact_Number" VALUE="+91" SIZE="30" onfocus="abc(this)" maxlength="10" minlength="10" required >
+</INPUT>
+</div>
+</div>
+<div class="jumbotron">
+<div class="container">
+SELECT AMONGST OR AVAILABLE DELUXE ROOMS:<SELECT name="room">
+<option value="NORMAL">NORMAL </OPTION>
+<option value="DELUXE">DELUXE </OPTION>
+</SELECT>
+
+
+SELECT BED TYPE:<select name="bed">
+<option value="SINGLE">SINGLE</OPTION>
+<option value="DOUBLE">DOUBLE</OPTION>
+</select>
+<BR>
+SELECT ACCOMMODATION:<SELECT name="accomodation">
+<option value="PREMIUM">PREMIUM</OPTION>
+<option value="GENERAL">GENERAL</OPTION>
+</SELECT>
+<BR>
+ADDITIONAL ACCOMMODATION:    <SELECT name="a_accomodation">
+<option value="POOL">POOL</OPTION>
+<option value="GAME LOT">GAME LOT</OPTION>
+</option>
+</SELECT>
+<br>
+DATE OF BOOKING   :<INPUT TYPE="DATE" VALUE="    /     /2018" NAME="d_o_b" SIZE="30" required>
+<BR>
+DATE OF LEAVING   :<INPUT TYPE="DATE" VALUE="    /     /2018" NAME="d_o_l" SIZE="30" required>
+<BR>
+</div>
+</div>
+
+<BR>
+<div class="jumbotron">
+<div class="container">
+SELECT PAYMENT OPTION:
+<SELECT name="payment">
+<option value="CREDIT CARD">CREDIT CARD</OPTION>
+<option value="DEBIT CARDT">DEBIT CARD</OPTION>
+<option value="NEFT">NEFT</OPTION>
+<option value="NET BANKING">NET BANKING</OPTION>
+</SELECT>
+<BR>
+SELECT PAYMENT GATEWAY:
+<SELECT name="payment_gateway">
+<option value="payTM">payTM</OPTION>
+<option value="PAY-PAL">PAY-PAL</OPTION>
+</SELECT>
+
+
+
+
+
+
+<center><input type="submit" value="submit" onClick="return validate()"></center>
+</FORM>
+</div>
+</div>
+
+
+
+
+
+<script>
+function abc(x) {
+    x.style.background = "#E89E00";
+}
+ 
+function fn()
+{
+var x = document.getElementById("FN");
+x.value=x.value.toUpperCase();
+}
+
+function fn2()
+{
+var x = document.getElementById("LN");
+x.value=x.value.toUpperCase();
+}
+
+function sdf()
+{
+  x.style.background = "green";
+}
+
+function proceed()
+{
+var x = document.getElementById("FN").value;
+var y = document.getElementById("LN").value;
+if(x==""||y=="")
+{
+alert("KINDLY FILL ALL THE DETAILS");
+}else
+alert("hello "+x+" "+y+" successfully submited");
+}
+
+</script>
+
+
+
+
+</BODY>
+</HTML>

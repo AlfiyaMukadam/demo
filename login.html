@@ -1,0 +1,59 @@
+<html>
+<head>
+<link rel="stylesheet" href="login.css">
+<title>
+P & A: GUEST login
+</title>
+</head>
+<body background="llll.jpg">
+<ul>
+<li><a href="bts.html">HOME</a></li>
+</ul>
+<div class="loginbox">
+<img src="log.png" class="log">
+<h1>P & A : GUEST LOGIN</h1>
+<form>
+<p>USERNAME / ID</p>
+<input type="text" id="username" value="" name="username" placeholder="enter your username">
+<p>PASSWORD</p>
+<input type="password" name="" placeholder="enter your password" id="password">
+<input type="submit" name="" value="LOGIN" onclick="login()">
+
+<br>
+<a href="forget.html">forgot password</a>
+<br>
+<a href="new.html">create a new account</a>
+
+<script>
+function login()
+{
+var a=document.getElementById('username').value
+var b=document.getElementById('password').value
+if(a==""||b=="")
+{
+alert("!!! please fill the details !!!");
+}
+else 
+if(a=="STAFF" && b=="12345")
+{
+window.open("manager.html");
+}
+else
+if(a=="GUEST" && b=="12345")
+{
+window.open("gservice.html");
+}
+else
+if(a=="ADMIN" && b=="12345")
+{
+window.open("admin1.html");
+}
+
+else
+{
+alert("wrong id/password");
+}
+
+}
+</script>
+</body>

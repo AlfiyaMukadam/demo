@@ -1,0 +1,58 @@
+<FORM action="book.php" method="post">
+<b>
+<label>FIRST NAME    :</label>
+  <INPUT TYPE="TEXT" NAME="first_name" VALUE="" SIZE="30"  onfocus="abc(this)" ID="FN" onblur="fn()">
+<BR>
+<label>LAST NAME     :</label>
+  <INPUT TYPE="TEXT" NAME="last_name" VALUE="" SIZE="30" onfocus="abc(this)" ID="LN" onblur="fn2()">
+<BR>
+<label>ADDRESS       :</label>
+  <INPUT TYPE="TEXT" NAME="address" VALUE="" SIZE="30" onfocus="abc(this)">
+<BR>
+<label>ADHAAR        :</label>
+  <INPUT TYPE="TEXT" NAME="Adhaar_no" VALUE="" SIZE="30" onfocus="abc(this)" >
+<BR>
+<label>PHONE         :</label>
+  <INPUT TYPE="TEXT" NAME="Contact_Number" VALUE="+91" SIZE="30" onfocus="abc(this)">
+  
+---------------------------------------------------------------------------------------------------
+
+SELECT BED TYPE:
+<select name="bed">
+<option value="SINGLE">SINGLE</OPTION>
+<option value="DOUBLE">DOUBLE</OPTION>
+</select>
+<BR>SELECT ACCOMMODATION:
+<SELECT name="accomodation">
+<option value="PREMIUM">PREMIUM</OPTION>
+<option value="GENERAL">GENERAL</OPTION>
+</SELECT>
+<BR>ADDITIONAL ACCOMMODATION:
+<SELECT name="a_accomodation">
+<option value="POOL">POOL</OPTION>
+<option value="GAME LOT">GAME LOT</OPTION>
+</SELECT>
+---------------------------------------------------------------------------------------------------
+
+<b>
+DATE OF BOOKING   :<INPUT TYPE="DATE" VALUE="    /     /2018" NAME="d_o_b" SIZE="30">
+<BR>
+DATE OF LEAVING   :<INPUT TYPE="DATE" VALUE="    /     /2018" NAME="d_o_l" SIZE="30">
+<BR>
+---------------------------------------------------------------------------------------------------
+<BR>
+SELECT PAYMENT OPTION:
+<SELECT name="payment">
+<option value="CREDIT CARD">CREDIT CARD</OPTION>
+<option value="DEBIT CARDT">DEBIT CARD</OPTION>
+<option value="NEFT">NEFT</OPTION>
+<option value="NET BANKING">NET BANKING</OPTION>
+</SELECT>
+<BR>
+SELECT PAYMENT GATEWAY:
+<SELECT name="payment_gateway">
+<option value="payTM">payTM</OPTION>
+<option value="PAY-PAL">PAY-PAL</OPTION>
+</SELECT>
+<center><input type="submit" value="PROCEED"></center>
+</FORM>
